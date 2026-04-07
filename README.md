@@ -26,7 +26,7 @@ http://127.0.0.1:8000/docs
 
 Docker
 Build image
-docker build -t weather-mlops .
+docker build -t weather-mlops.
 Run container
 docker run -p 8000:8000 weather-mlops
 API Endpoint
