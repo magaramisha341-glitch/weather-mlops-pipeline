@@ -21,15 +21,17 @@ The system includes data ingestion, preprocessing, model training, API deploymen
 
 ## Project Structure
 
+```text
 weather-mlops-pipeline/
-├── app/ # API code
-├── data/ # raw and processed data
-├── models/ # trained model
-├── src/ # pipeline scripts
-├── notebooks/ # experiments
-├── Dockerfile # container setup
-├── requirements.txt # dependencies
-├── report.md # project report
+├── app/                 # API code
+├── data/                # raw and processed data
+├── models/              # trained model
+├── src/                 # pipeline scripts
+├── notebooks/           # experiments
+├── Dockerfile           # container setup
+├── requirements.txt     # dependencies
+├── report.md            # project report
+```
 
 ---
 
