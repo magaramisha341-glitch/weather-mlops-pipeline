@@ -1,3 +1,15 @@
+# Weather Rain Prediction MLOps Pipeline
+
+## Overview
+
+This project implements a complete MLOps pipeline for predicting whether it will rain tomorrow based on weather data.
+
+The system includes data ingestion, preprocessing, model training, API deployment, monitoring, and containerization.
+
+---
+
+## Features
+
 - Data ingestion from Open-Meteo API
 - Data preprocessing and feature engineering
 - Logistic Regression model for prediction
@@ -21,41 +33,62 @@ weather-mlops-pipeline/
 ├── report.md            # project report
 ---
 
-How to Run
-Install dependencies
+## How to Run
+
+### 1. Install dependencies
+
 pip install -r requirements.txt
-Run pipeline
+
+###2. Run pipeline
 python src/ingest.py
 python src/preprocess.py
 python src/train.py
-Run API
+
+###3. Run API
 uvicorn app.main:app --reload
 
 Open:
+
 http://127.0.0.1:8000/docs
+ ### Docker
+### Build image
 
-Docker
-
+```
 docker build -t weather-mlops.
+```
+### Run container
+
+```
 docker run -p 8000:8000 weather-mlops
+```
 
-API Endpoint
+---
 
-POST /predict
+## API Endpoint
+
+### POST /predict
 
 Example input:
+
+```json
 {
-"temp_max": 20,
-"temp_min": 10,
-"precipitation": 2
+  "temp_max": 20,
+  "temp_min": 10,
+  "precipitation": 2
 }
+```
 
-Example output:
+Output:
+
+```json
 {
-"prediction": 0,
-"result": "No rain tomorrow"
+  "prediction": 0,
+  "result": "No rain tomorrow"
 }
+```
 
-Monitoring
+---
 
-All predictions are logged in logs.log.
+## Monitoring
+
+All predictions are logged in `logs.log`.
