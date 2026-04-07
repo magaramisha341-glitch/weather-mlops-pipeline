@@ -20,30 +20,24 @@ weather-mlops-pipeline/
 ├── requirements.txt     # dependencies
 ├── report.md            # project report
 How to Run
-1. Install dependencies
-
+Install dependencies
 pip install -r requirements.txt
-
-2. Run pipeline
-
+Run pipeline
 python src/ingest.py
 python src/preprocess.py
 python src/train.py
-
-3. Run API
-
+Run API
 uvicorn app.main:app --reload
 
 Open:
 http://127.0.0.1:8000/docs
 
 Docker
-Build image
 
+Build image
 docker build -t weather-mlops.
 
 Run container
-
 docker run -p 8000:8000 weather-mlops
 
 API Endpoint
