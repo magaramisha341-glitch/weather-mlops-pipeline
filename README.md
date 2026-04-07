@@ -1,14 +1,3 @@
-The system includes data ingestion, preprocessing, model training, API deployment, monitoring, and containerization.
-
-## Features
-
-- Data ingestion from Open-Meteo API
-- Data preprocessing and feature engineering
-- Logistic Regression model for prediction
-- FastAPI-based REST API
-- Logging for monitoring
-- Docker containerization
-
 ## Project Structure
 
 ```text
@@ -34,9 +23,10 @@ uvicorn app.main:app --reload
 Open:
 
 http://127.0.0.1:8000/docs
+
 Docker
 Build image
-docker build -t weather-mlops.
+docker build -t weather-mlops .
 Run container
 docker run -p 8000:8000 weather-mlops
 API Endpoint
@@ -59,7 +49,3 @@ Example output:
 Monitoring
 
 Prediction activity is logged in logs.log.
-
-
-
-├── notebooks/           
