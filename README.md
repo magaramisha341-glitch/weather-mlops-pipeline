@@ -10,12 +10,12 @@ The system includes data ingestion, preprocessing, model training, API deploymen
 
 ## Features
 
-- Data ingestion from Open-Meteo API
-- Data preprocessing and feature engineering
-- Logistic Regression model for prediction
-- FastAPI-based REST API
-- Logging for monitoring
-- Docker containerization
+* Data ingestion from Open-Meteo API
+* Data preprocessing and feature engineering
+* Logistic Regression model for prediction
+* FastAPI-based REST API
+* Logging for monitoring
+* Docker containerization
 
 ---
 
@@ -31,64 +31,46 @@ weather-mlops-pipeline/
 ├── Dockerfile           # container setup
 ├── requirements.txt     # dependencies
 ├── report.md            # project report
----
+```
 
-## How to Run
+How to Run
 
-### 1. Install dependencies
-
+1. Install dependencies
 pip install -r requirements.txt
 
-###2. Run pipeline
+2. Run pipeline
 python src/ingest.py
 python src/preprocess.py
 python src/train.py
 
-###3. Run API
+3. Run API
 uvicorn app.main:app --reload
 
 Open:
 
 http://127.0.0.1:8000/docs
- ### Docker
-### Build image
-
-```
+Docker
+Build image
 docker build -t weather-mlops.
-```
-### Run container
-
-```
+Run container
 docker run -p 8000:8000 weather-mlops
-```
-
----
-
-## API Endpoint
-
-### POST /predict
+API Endpoint
+POST /predict
 
 Example input:
 
-```json
 {
   "temp_max": 20,
   "temp_min": 10,
   "precipitation": 2
 }
-```
 
-Output:
+Example output:
 
-```json
 {
   "prediction": 0,
   "result": "No rain tomorrow"
 }
-```
+Monitoring
 
----
-
-## Monitoring
-
-All predictions are logged in `logs.log`.
+All predictions are logged in logs.log.
