@@ -34,8 +34,7 @@ weather-mlops-pipeline/
 ```
 
 ## How to Run
-
-1. Install dependencies  
+### 1. Install dependencies  
 pip install -r requirements.txt  
 
 ### 2. Run pipeline  
@@ -54,10 +53,10 @@ http://127.0.0.1:8000/docs
 ### Docker
 
 Build image  
-docker build -t weather-mlops .  
+docker build -t weather-mlops . 
 
 Run container  
-docker run -p 8000:8000 weather-mlops. 
+docker run -p 8000:8000 weather-mlops
 
 ---
 
