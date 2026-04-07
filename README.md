@@ -1,3 +1,15 @@
+# Weather Rain Prediction MLOps Pipeline
+
+## Overview
+
+This project implements a complete MLOps pipeline for predicting whether it will rain tomorrow based on weather data.
+
+The system includes data ingestion, preprocessing, model training, API deployment, monitoring, and containerization.
+
+---
+
+## Features
+
 - Data ingestion from Open-Meteo API
 - Data preprocessing and feature engineering
 - Logistic Regression model for prediction
@@ -19,7 +31,6 @@ weather-mlops-pipeline/
 ├── Dockerfile           # container setup
 ├── requirements.txt     # dependencies
 ├── README.md            # project documentation
-
 How to Run
 1. Install dependencies
 pip install -r requirements.txt
@@ -35,7 +46,7 @@ Open:
 http://127.0.0.1:8000/docs
 Docker
 Build image
-docker build -t weather-mlops .
+docker build -t weather-mlops.
 Run container
 docker run -p 8000:8000 weather-mlops
 API Endpoint
