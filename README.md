@@ -19,7 +19,9 @@ weather-mlops-pipeline/
 ├── Dockerfile           # container setup
 ├── requirements.txt     # dependencies
 ├── report.md            # project report
+
 How to Run
+
 1. Install dependencies
 pip install -r requirements.txt
 2. Run pipeline
