@@ -55,22 +55,53 @@ docker build -t weather-mlops.
 Run container
 docker run -p 8000:8000 weather-mlops
 API Endpoint
-POST /predict
+### How to Run
 
-Example input:
+### Install dependencies
+pip install -r requirements.txt
 
+### Run pipeline
+python src/ingest.py
+python src/preprocess.py
+python src/train.py
+
+### Run API
+uvicorn app.main:app --reload
+
+Open:
+http://127.0.0.1:8000/docs
+
+---
+
+### Docker
+
+### Build image
+docker build -t weather-mlops .
+
+### Run container
+docker run -p 8000:8000 weather-mlops
+
+---
+
+### API Endpoint
+
+### POST /predict
+
+### Example input
 {
-  "temp_max": 20,
-  "temp_min": 10,
-  "precipitation": 2
+"temp_max": 20,
+"temp_min": 10,
+"precipitation": 2
 }
 
-Example output:
-
+### Example output
 {
-  "prediction": 0,
-  "result": "No rain tomorrow"
+"prediction": 0,
+"result": "No rain tomorrow"
 }
-Monitoring
+
+---
+
+### Monitoring
 
 All predictions are logged in logs.log.
