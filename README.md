@@ -80,13 +80,12 @@ Run the Streamlit dashboard:
 ```bash
 streamlit run dashboard.py
 ```
-
-The dashboard allows users to input weather data and get real-time predictions.
+<small>The dashboard allows users to input weather data and get real-time predictions.</small>
 ---
 
 ### Architecture
 
-Streamlit (Frontend) → FastAPI (Backend) → Machine Learning Model → Prediction
+<small>Streamlit (Frontend) → FastAPI (Backend) → Machine Learning Model → Prediction</small>
 ---
 
 ## Docker
