@@ -1,33 +1,33 @@
-# Weather Rain Prediction MLOps Pipeline
+# 🌧️ Weather Rain Prediction MLOps Pipeline
 
 ## Overview
 
 This project implements a complete MLOps pipeline for predicting whether it will rain tomorrow based on weather data.
 
-The system includes data ingestion, preprocessing, model training, API deployment, monitoring, and containerization.
-
-The pipeline automates data collection, processing, model training, and deployment for real-time predictions.
+The system includes data ingestion, preprocessing, model training, API deployment, monitoring, and containerization. It is designed to simulate a real-world production environment with an end-to-end machine learning workflow.
 
 ---
 
 ## Features
 
-- Data ingestion from Open-Meteo API
-- Data preprocessing and feature engineering
-- Logistic Regression model for prediction
-- FastAPI-based REST API
-- Logging for monitoring
-- Docker containerization
+- Data ingestion from Open-Meteo API  
+- Data preprocessing and feature engineering  
+- Logistic Regression model for prediction  
+- FastAPI-based REST API  
+- Streamlit dashboard (interactive frontend)  
+- Logging for monitoring  
+- Docker containerization  
 
 ---
 
 ## Tech Stack
 
-- Python
-- FastAPI
-- Scikit-learn
-- Docker
-- Open-Meteo API
+- Python  
+- FastAPI  
+- Streamlit  
+- Scikit-learn  
+- Docker  
+- Open-Meteo API  
 
 ---
 
@@ -36,13 +36,14 @@ The pipeline automates data collection, processing, model training, and deployme
 ```text
 weather-mlops-pipeline/
 ├── app/                 # API code
+├── src/                 # pipeline scripts
 ├── data/                # raw and processed data
 ├── models/              # trained model
-├── src/                 # pipeline scripts
 ├── notebooks/           # experiments
+├── dashboard.py         # Streamlit dashboard
 ├── Dockerfile           # container setup
 ├── requirements.txt     # dependencies
-├── report.md            # project report
+├── README.md            # project documentation
 ```
 
 ---
@@ -70,7 +71,22 @@ Open:
 ```
 http://127.0.0.1:8000/docs
 ```
+---
 
+### Dashboard
+
+Run the Streamlit dashboard:
+
+```bash
+streamlit run dashboard.py
+```
+
+The dashboard allows users to input weather data and get real-time predictions.
+---
+
+### Architecture
+
+Streamlit (Frontend) → FastAPI (Backend) → Machine Learning Model → Prediction
 ---
 
 ## Docker
@@ -112,4 +128,6 @@ Example output:
 
 ## Monitoring
 
-All predictions are logged in `logs.log`.
+- All predictions and inputs are logged in logs.log
+- Tracks system activity and model behavior
+- Includes a health check endpoint (/health)
