@@ -1,0 +1,10 @@
+[
+    {
+        "version": "v1",
+        "model_name": "Logistic Regression",
+        "accuracy": 0.56,
+        "precision": 0.43,
+        "recall": 0.43,
+        "f1_score": 0.43
+    }
+]
