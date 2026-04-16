@@ -83,7 +83,7 @@ http://127.0.0.1:8000/docs
 
 ---
 
-🔌 API Endpoints
+## 🔌 API Endpoints
 - /predict → Predict rain
 - /health → Check system status
 - /metrics → View runtime + training metrics
