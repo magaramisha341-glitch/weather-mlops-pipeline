@@ -76,7 +76,6 @@ python src/train.py
 ```bash
 uvicorn app.main:app --reload
 ```
----
 
 Open API docs:
 
@@ -93,6 +92,8 @@ Example Request
   "temp_min": 10,
   "precipitation": 2
 }
+
+---
 
 ## 📊 Model Performance
 Accuracy: 0.56
