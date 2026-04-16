@@ -86,8 +86,9 @@ http://127.0.0.1:8000/docs
 - /health → Check system status
 - /metrics → View runtime + training metrics
 
-``` JSON
-Example Request
+
+### Example Request
+```json
 {
   "temp_max": 20,
   "temp_min": 10,
@@ -116,14 +117,13 @@ The system tracks:
 - Errors
 - Last prediction time
 
-Logs are stored in:
-
-logs.log
-📦 Artifacts
+Logs are stored in `logs.log`.
 
 ---
 
-## Artifacts are stored for reproducibility:
+## 📦 Artifacts
+
+Artifacts are stored for reproducibility:
 
 - Raw data → data/raw/weather.csv
 - Processed data → data/processed/weather_processed.csv
@@ -149,10 +149,10 @@ The project ensures reproducibility by:
 
 MLflow is used for:
 
-Experiment tracking
-Logging parameters
-Logging metrics
-Saving trained models
+- Experiment tracking  
+- Logging parameters  
+- Logging metrics  
+- Saving trained models  
 
 Runs are stored in:
 
@@ -164,21 +164,27 @@ mlruns/
 
 Run dashboard:
 
+```bash
 streamlit run dashboard.py
+```
 
 The dashboard allows users to:
 
-Input weather values
-Get predictions
-View model performance
+- Input weather values
+- Get predictions
+- View model performance
 
 ---
 
-```bash
 ## 🐳 Docker
-Build image
+
+### Build image
+```bash
 docker build -t weather-mlops .
-Run container
+```
+
+### Run container
+```bash
 docker run -p 8000:8000 weather-mlops
 ```
 
