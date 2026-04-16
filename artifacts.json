@@ -1,0 +1,8 @@
+{
+    "raw_data": "data/raw/weather.csv",
+    "processed_data": "data/processed/weather_processed.csv",
+    "model": "models/rain_model_v1.pkl",
+    "metrics": "metrics.json",
+    "model_history": "model_history.json",
+    "logs": "logs.log"
+}
