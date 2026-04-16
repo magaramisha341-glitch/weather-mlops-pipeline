@@ -72,7 +72,7 @@ python src/train.py
 ```
 ---
 
-## 3. Run API
+### 3. Run API
 ```bash
 uvicorn app.main:app --reload
 ```
@@ -81,10 +81,12 @@ Open API docs:
 
 http://127.0.0.1:8000/docs
 
+---
+
 🔌 API Endpoints
-/predict → Predict rain
-/health → Check system status
-/metrics → View runtime + training metrics
+- /predict → Predict rain
+- /health → Check system status
+- /metrics → View runtime + training metrics
 
 Example Request
 {
@@ -96,10 +98,10 @@ Example Request
 ---
 
 ## 📊 Model Performance
-Accuracy: 0.56
-Precision: 0.43
-Recall: 0.43
-F1-score: 0.43
+- Accuracy: 0.56
+- Precision: 0.43
+- Recall: 0.43
+- F1-score: 0.43
 
 Note: The focus is on building a complete MLOps pipeline rather than achieving perfect model accuracy.
 
@@ -109,10 +111,10 @@ Note: The focus is on building a complete MLOps pipeline rather than achieving p
 
 The system tracks:
 
-Total requests
-Successful predictions
-Errors
-Last prediction time
+- Total requests
+- Successful predictions
+- Errors
+- Last prediction time
 
 Logs are stored in:
 
@@ -123,12 +125,12 @@ logs.log
 
 ## Artifacts are stored for reproducibility:
 
-Raw data → data/raw/weather.csv
-Processed data → data/processed/weather_processed.csv
-Model → models/rain_model_v1.pkl
-Metrics → metrics.json
-Model history → model_history.json
-Logs → logs.log
+- Raw data → data/raw/weather.csv
+- Processed data → data/processed/weather_processed.csv
+- Model → models/rain_model_v1.pkl
+- Metrics → metrics.json
+- Model history → model_history.json
+- Logs → logs.log
 
 ---
 
@@ -136,10 +138,10 @@ Logs → logs.log
 
 The project ensures reproducibility by:
 
-Saving datasets and models
-Tracking artifacts
-Using fixed random state
-Containerizing with Docker
+- Saving datasets and models
+- Tracking artifacts
+- Using a fixed random state
+- Containerizing with Docker
 
 ---
 
@@ -172,11 +174,13 @@ View model performance
 
 ---
 
+```bash
 ## 🐳 Docker
 Build image
 docker build -t weather-mlops .
 Run container
 docker run -p 8000:8000 weather-mlops
+```
 
 ---
 
