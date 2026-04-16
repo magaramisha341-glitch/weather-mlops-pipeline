@@ -62,7 +62,6 @@ weather-mlops-pipeline/
 ```bash
 pip install -r requirements.txt
 ```
----
 
 ### 2. Run pipeline
 ```bash
@@ -70,7 +69,6 @@ python src/ingest.py
 python src/preprocess.py
 python src/train.py
 ```
----
 
 ### 3. Run API
 ```bash
@@ -88,12 +86,14 @@ http://127.0.0.1:8000/docs
 - /health → Check system status
 - /metrics → View runtime + training metrics
 
+``` JSON
 Example Request
 {
   "temp_max": 20,
   "temp_min": 10,
   "precipitation": 2
 }
+```
 
 ---
 
